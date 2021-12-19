@@ -79,9 +79,9 @@ const useStyles = makeStyles(() =>
       color: 'white',
       display: "flex",
       flexDirection: "column",
-      padding: "0",
+      paddingLeft: "2rem",
       margin: "auto",
-      width: "63.5rem",
+      maxWidth: "63.5rem",
     },
     header: {
       width: '63.5rem',

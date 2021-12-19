@@ -46,7 +46,8 @@ const useStyles = makeStyles(() =>
       color: 'white',
       display: "flex",
       flexDirection: "column",
-      width: "63.5rem",
+      maxWidth: "63.5rem",
+      paddingLeft: '2rem'
     },
     movieList: {
       display: "flex",
