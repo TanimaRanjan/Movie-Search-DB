@@ -12,6 +12,7 @@ function App() {
 
   return (
     <Container disableGutters className={classes.container}>
+       <Container disableGutters className={classes.innerContainer}>
       <Header />
       <SearchBar setErrorMessage={setErrorMessage} setLoading={setLoading} />
       <Box className={classes.movieList}>
@@ -23,6 +24,7 @@ function App() {
           <Movies />
         )}
       </Box>
+      </Container>
     </Container>
   );
 }
@@ -34,10 +36,17 @@ const useStyles = makeStyles(() =>
       width: "100%",
       minHeight: "100vh",
       backgroundColor: "#255c99",
+      color: 'white',
       display: "flex",
       flexDirection: "column",
       padding: "0",
-      margin: "auto",
+
+    },
+    innerContainer: {
+      color: 'white',
+      display: "flex",
+      flexDirection: "column",
+      width: "63.5rem",
     },
     movieList: {
       display: "flex",

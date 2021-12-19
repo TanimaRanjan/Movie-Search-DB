@@ -23,6 +23,7 @@ const Playlist = () => {
 
   return (
     <Box className={classes.container}>
+      <Box className={classes.innerContainer}>
         <header className={classes.header}>
             <h1>Your movie playlist</h1>
             <Link className={classes.link} to="/">
@@ -32,8 +33,8 @@ const Playlist = () => {
       <Box className={classes.playlist}>
         {playlist && playlist.length > 0 ? (
           playlist.map((movie: Movie, index: number) => (
-            <Box display={"flex"} flexDirection={"column"}>
-              <MovieCard movie={movie} key={movie.imdbID + index} />
+            <Box display={"flex"} flexDirection={"column"} key={movie.imdbID + index}>
+              <MovieCard movie={movie}  />
               <Button
                 className={classes.button}
                 onClick={() => deleteFromPlaylist(movie)}
@@ -49,10 +50,12 @@ const Playlist = () => {
         )}
       </Box>
       {playlist && playlist.length > 0 && (
-        <Button className={classes.button} onClick={confirmPlaylist}>
+        <Button className={classes.confirmButton} onClick={confirmPlaylist}>
           Confirm Playlist
         </Button>
       )}
+      
+      </Box>
       <Footer />
     </Box>
   );
@@ -65,19 +68,30 @@ const useStyles = makeStyles(() =>
       textAlign: "center",
       width: "100%",
       backgroundColor: "#255c99",
+      color: 'white',
       display: "flex",
       flexDirection: "column",
       padding: "0",
       margin: "auto",
     },
+    innerContainer: {
+      color: 'white',
+      display: "flex",
+      flexDirection: "column",
+      padding: "0",
+      margin: "auto",
+      width: "63.5rem",
+    },
     header: {
+      width: '63.5rem',
+      margin: 'auto',
       display: "flex",
       padding: "2rem 0",
-      justifyContent: "space-evenly",
+      justifyContent: "space-between",
       alignItems: "baseline",
     },
     link: {
-      color: "black",
+      color: "white",
       textDecoration: "none",
       fontWeight: "bold",
       padding: "2rem",
@@ -89,10 +103,17 @@ const useStyles = makeStyles(() =>
       margin: "auto",
     },
     button: {
+      marginTop: '2rem',
       backgroundColor: "lightgrey",
       width: "10rem",
-      alignSelf: "center",
+      alignSelf: "flex-start",
     },
+    confirmButton: {
+        margin: '2rem 0',
+        backgroundColor: "lightgrey",
+        width: "10rem",
+        alignSelf: "center",
+    }
   })
 );
 

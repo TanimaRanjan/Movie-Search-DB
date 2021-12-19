@@ -23,7 +23,7 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
 const useStyles = makeStyles(() =>
   createStyles({
     movieCard: {
-      margin: "1.5rem 2.5rem",
+      margin: "2.5rem 2.5rem 1.5rem 0",
       maxWidth: "10rem",
     },
     image: {

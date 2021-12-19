@@ -19,8 +19,8 @@ const Movies = () => {
     <>
       {movies &&
         movies.map((movie: Movie, index: number) => (
-          <Box display={"flex"} flexDirection={"column"}>
-            <MovieCard movie={movie} key={movie.imdbID + index} />
+          <Box display={"flex"} flexDirection={"column"} key={movie.imdbID+index} >
+            <MovieCard movie={movie} />
             <Button
               className={classes.button}
               onClick={() => addToPlaylist(movie)}
@@ -48,7 +48,7 @@ const useStyles = makeStyles(() =>
     button: {
       backgroundColor: "lightgrey",
       width: "10rem",
-      alignSelf: "center",
+      alignSelf: "flex-start",
     },
     header: {
       display: "flex",

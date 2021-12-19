@@ -23,11 +23,11 @@ const useStyles = makeStyles(() =>
     header: {
       display: "flex",
       padding: "2rem 0",
-      justifyContent: "space-evenly",
+      justifyContent: "space-between",
       alignItems: "baseline",
     },
     link: {
-      color: "black",
+      color: "white",
       textDecoration: "none",
       fontWeight: "bold",
     },
