@@ -19,8 +19,10 @@ Please include answers to the following questions with your submission.
 2. Did you learn anything new while completing this assignment?
     No
 3. What did you not have time to add? What work took the up majority of your time?
-    I think I spent most of the time setting up redux and typescript. I could have just created a simple app without redux or typescript but it felt list the right way to go for an application that can be expanded to create shopping cart.
+    I could have just created a simple app without redux or typescript but it felt list the right way to go for an application that can be expanded to create shopping cart.
     I did spend sometime thinking about the base structure and display. Though I didn't get a chance to improve the style. All the css were very basic.
+    I didnt have time to properly set up confirm message logic.
+
    
 4. How could the application be improved?
    1. add 'Load more' button at bottom of the main page to load more movies for the search term. Current Im only calling the default 10 movies. 

@@ -11,7 +11,7 @@ import Footer from "./Footer";
 const Playlist = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const playlist = useSelector(getPlaylist);
+  const {playlist, message} = useSelector(getPlaylist);
 
   const deleteFromPlaylist = (movie: Movie) => {
     dispatch({ type: "DELETE_MOVIE", payload: movie.imdbID });
@@ -20,6 +20,7 @@ const Playlist = () => {
   const confirmPlaylist = () => {
     dispatch({ type: "CONFIRM_PLAYLIST" });
   };
+
 
   return (
     <Box className={classes.container}>
@@ -45,7 +46,7 @@ const Playlist = () => {
           ))
         ) : (
           <Box>
-            <h2>You have no items in your playlist</h2>
+            <h2>{message}</h2>
           </Box>
         )}
       </Box>

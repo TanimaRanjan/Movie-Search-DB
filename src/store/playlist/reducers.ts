@@ -1,25 +1,31 @@
-import { Movie } from "./types"
+import { Movie , defaultState } from "./types"
 
-const initialState: Movie[] = []  
+const initialState = {
+    playlist: [],
+    message: 'You have no items in your playlist'
+}
 
-export default function playlistReducer(state = initialState, action:any):Movie[] {
+export default function playlistReducer(state = initialState, action:any):defaultState {
     switch (action.type) {
         case 'ADD_MOVIE': 
-            return [   
-                action.payload, ...state.filter((movie:Movie)=>movie.imdbID !== action.payload.imdbID)
-            ]
+            return {  
+                ...state,
+                playlist: [action.payload, ...state.playlist.filter((movie:Movie)=>movie.imdbID !== action.payload.imdbID)],
+            }
         case 'DELETE_MOVIE': 
-            return [
-                 ...state.filter((movie:Movie) => movie.imdbID !== action.payload)
-            ]
+            return {
+                ...state, 
+                playlist:[...state.playlist.filter((movie:Movie) => movie.imdbID !== action.payload)],
+            }
         case 'CONFIRM_PLAYLIST': 
-            return [
-                ...initialState
-            ]
+            return {
+                playlist: [...initialState.playlist],
+                message: 'Your playlist has been confirmed'
+            }
         default:
-            return [
+            return {
                 ...state
-            ]
+            }
     }
 }
 

@@ -5,3 +5,9 @@ export interface Movie {
   Year: string;
   imdbID: string;
 }
+
+
+export interface defaultState {
+  playlist: Movie[],
+  message: string
+}

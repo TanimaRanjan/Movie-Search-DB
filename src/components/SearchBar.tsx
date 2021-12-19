@@ -54,6 +54,7 @@ const SearchBar: React.FC<Props> = ({ setErrorMessage, setLoading }) => {
         <form className="search">
           <Box display={"flex"}>
             <InputBase
+              autoFocus
               type="search"
               className={classes.searchField}
               value={searchValue}
