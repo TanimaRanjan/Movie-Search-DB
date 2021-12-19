@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Movie DB using 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Basic Requirements
+Create a frontend application in React that allows a user to:
+Search for movies
+Render the results
+Add movies to a playlist
+Confirm the movies in the playlist.
+Please include a footer that says "My favorite color is {your favorite color}" on the confirmation screen, with the background color being that color.
 
-In the project directory, you can run:
 
-### `npm start`
+# Summary Questions
+Please include answers to the following questions with your submission.
+ What were the most difficult tasks?
+    difficult part was to try completing the task in 4 hrs. As no design was provided I could spend long time just designing the page. I spent more time on making sure the code was function but didnt spend much time on styling. This is difficult for me being a front end engineer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Did you learn anything new while completing this assignment?
+    No
+3. What did you not have time to add? What work took the up majority of your time?
+    I think I spent most of the time setting up redux and typescript. I could have just created a simple app without redux or typescript but it felt list the right way to go for an application that can be expanded to create shopping cart.
+    I would also didnt get a chance to improve the style. All the css were very basic
+   
+5. How could the application be improved?
+   1. add 'Load more' button at bottom of the main page to load more movies for the search term. Current Im only calling the default 10 movies. 
+   2. add loading and error message in redux. This was a quick implementation
+   3. adding ability to create users so we could also store playlist history per user. 
+   
