@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.e8e1dc1e.js",
-    "index.html": "/index.html",
-    "main.e8e1dc1e.js.map": "/static/js/main.e8e1dc1e.js.map"
+    "main.js": "/Movie-Search-DB/static/js/main.0d0a8733.js",
+    "index.html": "/Movie-Search-DB/index.html",
+    "main.0d0a8733.js.map": "/Movie-Search-DB/static/js/main.0d0a8733.js.map"
   },
   "entrypoints": [
-    "static/js/main.e8e1dc1e.js"
+    "static/js/main.0d0a8733.js"
   ]
 }
