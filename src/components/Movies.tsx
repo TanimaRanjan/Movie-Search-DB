@@ -1,19 +1,15 @@
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Movie } from "../store/playlist/types";
 import MovieCard from "./MovieCard";
-import { Box, Button } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { getMovies } from "../store/movies/selectors";
 import React from "react";
 
 const Movies = () => {
-  const classes = useStyles();
-  const dispatch = useDispatch();
+  const classes = useStyles()
   const movies = useSelector(getMovies);
 
-  const addToPlaylist = (movie: Movie) => {
-    dispatch({ type: "ADD_MOVIE", payload: movie });
-  };
 
   return (
     <>
@@ -21,12 +17,7 @@ const Movies = () => {
         movies.map((movie: Movie, index: number) => (
           <Box display={"flex"} flexDirection={"column"} key={movie.imdbID+index} >
             <MovieCard movie={movie} />
-            <Button
-              className={classes.button}
-              onClick={() => addToPlaylist(movie)}
-            >
-              Add to Playlist
-            </Button>
+
           </Box>
         ))}
     </>
@@ -45,11 +36,7 @@ const useStyles = makeStyles(() =>
       padding: "0",
       margin: "auto",
     },
-    button: {
-      backgroundColor: "lightgrey",
-      width: "10rem",
-      alignSelf: "flex-start",
-    },
+
     header: {
       display: "flex",
       padding: "2rem 0",

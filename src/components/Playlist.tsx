@@ -13,10 +13,6 @@ const Playlist = () => {
   const dispatch = useDispatch();
   const {playlist, message} = useSelector(getPlaylist);
 
-  const deleteFromPlaylist = (movie: Movie) => {
-    dispatch({ type: "DELETE_MOVIE", payload: movie.imdbID });
-  };
-
   const confirmPlaylist = () => {
     dispatch({ type: "CONFIRM_PLAYLIST" });
   };
@@ -36,12 +32,6 @@ const Playlist = () => {
           playlist.map((movie: Movie, index: number) => (
             <Box display={"flex"} flexDirection={"column"} key={movie.imdbID + index}>
               <MovieCard movie={movie}  />
-              <Button
-                className={classes.button}
-                onClick={() => deleteFromPlaylist(movie)}
-              >
-                Delete
-              </Button>
             </Box>
           ))
         ) : (
