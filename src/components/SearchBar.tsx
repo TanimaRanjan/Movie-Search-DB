@@ -77,9 +77,14 @@ const useStyles = makeStyles(() =>
   createStyles({
     form: {
       backgroundColor: "white",
+      maxWidth:'90%',
       width: "50rem",
+      '@media (max-width: 768px)': {
+        width: "100%",
+      },
     },
     searchContainer: {
+      maxWidth:'90%',
       width: '63.5rem',
       display: "flex",
       alignItems: "center",
@@ -90,7 +95,6 @@ const useStyles = makeStyles(() =>
       borderTopRightRadius: 0,
       borderBottomRightRadius: 0,
     },
-    search: {},
     searchField: {
       backgroundColor: "white",
       marginLeft: "1rem",

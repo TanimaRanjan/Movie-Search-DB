@@ -72,8 +72,12 @@ const useStyles = makeStyles(() =>
       paddingLeft: "2rem",
       margin: "auto",
       maxWidth: "63.5rem",
+      '@media (max-width: 768px)': {
+        width: "100%",
+      },
     },
     header: {
+      maxWidth:'100%',
       width: '63.5rem',
       margin: 'auto',
       display: "flex",
